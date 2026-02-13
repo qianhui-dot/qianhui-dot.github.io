@@ -171,8 +171,9 @@
             fill="#ff7aa2"/>
     </svg>
 
-    <h1>Will you be my valentine?</h1>
-
+    <section id="question">
+      <h1>Will you be my valentine?</h1>
+    </section>
     <section class="button-zone" id="zone">
       <button id="yesBtn">Yes</button>
       <button id="noBtn">No</button>
@@ -196,6 +197,7 @@
     const noBtn = document.getElementById("noBtn");
     const result = document.getElementById("result");
     const hint = document.getElementById("hint");
+    const question = document.getElementById("question");
 
     /* ---------- CONFETTI ---------- */
     const confettiCanvas = document.getElementById("confettiCanvas");
@@ -291,6 +293,7 @@
     /* ---------- YES CLICK ---------- */
     yesBtn.addEventListener("click", () => {
       zone.style.display = "none";
+      question.style.display = "none";
       hint.style.display = "none";     // HIDE THE HINT
       result.style.display = "block";
       resizeConfettiCanvas();
